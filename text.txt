@@ -1,71 +1,8 @@
-2018年1月14日13:04:27
-
-2018年1月14日13:14:44
-
-2018年1月14日14:30:23
-
-
-陈强的时间 2018年1月14日14:30:32
-
-apply plugin: 'com.android.application'
-//apply from: 'tinker-support.gradle'
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        // tinkersupport插件, 其中lastest.release指拉取最新版本，也可以指定明确版本号，例如1.0.4
-        classpath "com.tencent.bugly:tinker-support:latest.release"
-    }
-}
-android {
-    signingConfigs {
-        config {
-            keyAlias 'alias_name'
-            keyPassword 'guobi2468'
-            storeFile file('G:/keystore/keystore/GuoBiReleaseKey.keystore')
-            storePassword 'guobi2468'
-        }
-    }
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
-    defaultConfig {
-        applicationId "com.winguo"
-        minSdkVersion 15
-        targetSdkVersion 23
-        versionCode 24
-        versionName "2.5.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        ndk {
-            abiFilters 'armeabi', 'armeabi-v7a', 'x86', 'x86_64', 'arm64-v8a'
-        }
-        // 开启multidex
-        multiDexEnabled true
-    }
-    repositories {
-        flatDir {
-            dirs 'libs'
-        }
-    }
-    buildTypes {
-        debug {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-        release {
-            //是否混淆
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            //是否移除无用的Resources 文件
-            shrinkResources true
-            signingConfig signingConfigs.config
-            //proguardFile 'G:/Projects/newWinguo/app/proguard-rules.pro'
-        }
-    }
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
-        }
-    }
-}时间
-}
+<html>
+ <head></head>
+ <body>
+  <div style="font-size:12px;text-align:left; border:1px solid #9cc9e0; padding:1px 4px;color:#000000;font-family:Arial, Helvetica,sans-serif;">
+   <span><b>MySQL Query : </b> Can't connect to MySQL server on '192.168.0.211' (113) <br /><b> MySQL Error : </b> <br /> <b>MySQL Errno : </b>0 <br /><b> Message : </b> Connect failed: %s <br /><a href="http://faq.phpcms.cn/?errno=0&amp;msg=" target="_blank" style="color:red">Need Help?</a></span>
+  </div>
+ </body>
+</html>
