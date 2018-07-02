@@ -1,0 +1,425 @@
+adb 常用命令大全
+
+
+WGadmin@guobi.com
+guobi2468
+链接：http://pan.baidu.com/s/1eRHD9BG 密码：opqc 
+下载后,秋季版凯立德,把文件名改成navione, 复制到卡里代替原来的文件夹
+
+Netsh winsock reset  从新启动浏览器
+netsh advfirewall reset
+
+adb shell logcat "过滤器名字":i  *:s  用命令行查看数据
+
+adb shell logcat "json":i  *:s
+
+adb shell logcat  com.bmob.im.demo :e  *s 输出错误信息
+
+1. 显示系统中全部Android平台：
+    android list targets
+2. 显示系统中全部AVD（模拟器）：
+    android list avd
+3. 创建AVD（模拟器）：
+    android create avd --name 名称 --target 平台编号
+4. 启动模拟器：
+    emulator -avd 名称 -sdcard ~/名称.img (-skin 1280x800)
+5. 删除AVD（模拟器）：
+    android delete avd --name 名称
+6. 创建SDCard：
+    mksdcard 1024M ~/名称.img
+7. AVD(模拟器)所在位置：
+    Linux(~/.android/avd)      Windows(C:\Documents and Settings\Administrator\.android\avd)
+8. 启动DDMS：
+
+
+yes365cc@gmail.com
+    ddms
+9. 显示当前运行的全部模拟器：
+    adb devices
+10. 对某一模拟器执行命令：
+      adb -s 模拟器编号 命令
+
+	例如 链接某一个设备 adb -s 3e809e7e(设备名) shell (命令)
+11. 安装应用程序：
+      adb install -r 应用程序.apk
+
+	adb install -r GBIME_zh.apk
+
+adb uninstall 包名   卸载一个软件
+
+adb uninstall com.guobi.gbime
+
+adb uninstall com.guobi.gbime.alph
+
+adb uninstall com.guobi.winguo.hybrid
+
+adb remount && adb push GuoBiIME_Alphabet_en.apk system/app/GuoBiIME_Alphabet_en/ && adb reboot
+
+adb remount && adb push com.guobi.gbime.apk data/local/tmp/ && adb reboot
+
+
+mount -o rw,remount /system  删除系统文件前的权限修改
+
+
+12. 获取模拟器中的文件：
+      adb pull 手机的文件路径 pc存储的路径  adb pull system/remrew/rm.jar  h:
+13. 向模拟器中写文件：
+      adb push 文件名 路径
+14. 进入模拟器的shell模式：
+      adb shell
+15. 启动SDK，文档，实例下载管理器：
+      android
+16. 缷载apk包：
+      adb shell
+      cd data/app
+      rm apk包
+      exit
+      adb uninstall apk包的主包名
+      adb install -r apk包
+17. 查看adb命令帮助信息：
+      adb help
+18. 在命令行中查看LOG信息：
+      adb logcat -s 标签名
+19. adb shell后面跟的命令主要来自：
+      源码\system\core\toolbox目录和源码\frameworks\base\cmds目录。
+20. 删除系统应用：
+      adb remount （重新挂载系统分区，使系统分区重新可写）。
+      adb shell
+      cd system/app
+      rm *.apk
+
+21. 获取管理员权限：
+      adb root
+      mount -o rw,remount /system 修改system目录的权限
+      
+22. 启动Activity：
+      adb shell am start -n 包名/包名＋类名（-n 类名,-a action,-d date,-m MIME-TYPE,-c category,-e 扩展数据,等）。
+      adb shell am start -n com.android.email/com.android.email2.ui.MailActivityEmail
+23、发布端口：
+    你可以设置任意的端口号，做为主机向模拟器或设备的请求端口。如： 
+adb forward tcp:5555 tcp:8000
+24、复制文件：
+    你可向一个设备或从一个设备中复制文件， 
+     复制一个文件或目录到设备或模拟器上： 
+
+  adb remount ,意思是将设备改为可读可写
+  adb push 
+
+      如：adb 
+adb push test.txt /tmp/test.txt 
+从设备或模拟器上复制一个文件或目录： 
+     adb 
+pull <source> 
+<destination></destination></source> 
+     如：adb 
+adb pull /addroid/lib/libwebcore.so .
+
+adb pull /data/data/com.android.providers.contacts/databases/contacts2.db H:\QQPCmgr\Desktop\DCIM
+25、搜索模拟器/设备的实例：
+     取得当前运行的模拟器/设备的实例的列表及每个实例的状态： 
+    adb devices
+26、查看bug报告： 
+adb bugreport 
+27、记录无线通讯日志：
+    一般来说，无线通讯的日志非常多，在运行时没必要去记录，但我们还是可以通过命令，设置记录： 
+    adb shell 
+	logcat | grep 25783 (PID) 过滤包名： 
+    logcat -b radio
+28、获取设备的ID和序列号：
+     adb get-product 
+     adb get-serialno
+29、访问数据库SQLite3
+     adb shell 
+     sqlite3
+#cd system/sd/data //进入系统内指定文件夹 
+#ls //列表显示当前文件夹内容 
+#rm -r xxx //删除名字为xxx的文件夹及其里面的所有文件 
+#rm xxx //删除文件xxx 
+#rmdir xxx //删除xxx的文件夹
+
+****************************************************************************************************查看wind10 系统激活详情
+
+
+1.Win+R===>输入 slmgr.vbs -dlv   显示：最为详尽的激活信息，包括：激活ID、安装ID、激活截止日期
+2.Win+R===>输入 slmgr.vbs -dli   显示：操作系统版本、部分产品密钥、许可证状态
+3.Win+R===>输入 slmgr.vbs -xpr   显示：是否彻底激活
+4.Win+R===>输入 slmgr.vbs -ato   显示激活状态。
+
+
+********************************************************************************************************修改命令行编码格式
+
+chcp 65001 设置命令行的编码格式为 UTF-8
+chcp 936   设置命令行的编码格式为 简体中文 GBK
+
+
+
+***********************************************************************************************************ant 命令
+
+android update project --name MyActivity（要编译的项目名称） --target 11 （android版本号 11为android 6.0） --path G:\Projects\Projects200\MyActivity（项目路径）  创建ant
+
+android update project --name ss --target 10  --path G:\Projects\YuYingProjects\ss
+
+android.bat list targets 查看target  id编号。
+
+ant release
+ant -buildfile xfk_build.xml  编译问果桌面
+
+ant -buildfile xfk_build_release.xml
+
+
+***********************************************************************************************************android项目签名的生成
+
+到jdk 的bin 目录下：
+keytool -genkey -alias alias_name -keyalg RSA -validity 7000 -keystore GuoBiReleaseKey.keystore
+
+keytool -genkey -alias androidtext.keystore -keyalg RSA -validity 30 -keystore androidtext.keystore 
+
+(-validity 20000代表有效期天数)，命令完成后，bin目录中会生成android.keystore
+
+查看命令keytool -list -keystore "hybrid2dey.keystore" 输入你设置的keystore密码
+
+           keytool -list -v -keystore debug.keystore  查看 md5 和sha1
+查看一个应用的签名信息 
+ 1 先解压apk 文件。 去到META-INF目录
+ 2  keytool -printcert -file CERT.RSA 
+*************************************************************************************************************反编译命令
+
+反编译应用到的工具
+
+1.dex2jar.bat 反编译java代码 
+ 
+  将apk文件解压得到classes.dex的文件；再用命令  dex2jar.bat classes.dex 编译
+
+2 apktool.jar  appt.exe 反编译android中的xml文件
+
+  apktool d <file.apk>
+
+<file.apk>代表了要反编译的apk文件的路径，最好写绝对路径，比如C:\MusicPlayer.apk 
+
+<dir>代表了反编译后的文件的存储位置，比如C:\MusicPlayer 
+
+如果你给定的<dir>已经存在，那么输入完该命令后会提示你，并且无法执行，需要你重新修改命令加入-f指令 
+
+apktool d –f <file.apk> <dir> 
+
+
+这样就会强行覆盖已经存在的文件 
+
+  直接输入 apktool d HelloWord.apk (HelloWord.apk)为文件名
+  
+************************************************************************************************************.so文件的生成
+
+1.在android 项目中编写nativ 方法 定义so文件名 
+public class GBEngineApi
+    static {
+    		System.loadLibrary("gb_im_v5.2");
+    	}
+    	public static native int a(int langID, int subLangID, byte[] ldb);
+2.进入项目bin的calsses目录下 执行
+    javah com.guobi.gbime.engine.GBEngineApi  (javah 包名＋类名) 生成.h 
+	
+3.在项目中新建jni 目录 将.h 文件放进去 并通过.h 文件编写C文件 
+
+4.在jni目录新建Android.mk 文件 （配置jni 参数）
+         LOCAL_PATH:= $(call my-dir)
+         
+         include $(CLEAR_VARS)
+         
+         LOCAL_MODULE    := libgb_im_v5.2 //指定 so文件名 前面加lib
+         LOCAL_CFLAGS    := -Werror
+         LOCAL_SRC_FILES := JniClass.c 要编译的c文件
+         LOCAL_LDLIBS    := -llog
+         
+         include $(BUILD_SHARED_LIBRARY)
+
+5.进入项目路径执行
+   ndk-build APP_API=armeabi (APP_API=armeabi 要生成so文件的内核版本 x86 armeabi-v7a)
+
+
+******************************破解 mac os 系统的密码*****************************************************************
+
+1： 开机是按command+S键。
+2、之后会弹出命令字符，输入fsck -y并按回车。
+3、上面的命令执行完成后再输入mount -uaw /回车。
+4：然后输入rm /var/db/.AppleSetupDone回车。
+5、然后输入reboot回车重启电脑。
+6 ： 新建账号进入系统修改原有密码。
+
+
+***************git的基本使用命令****************************
+
+
+http://www.ruanyifeng.com/blog/2014/06/git_remote.html 详细教程
+
+
+cat  text.txt 查看某一个文件
+
+1： git init 初始化git
+
+
+2: git help 查看帮助文档
+
+3: git config --global user.name "chenqian" 设置当前访问的用户名
+
+4: git config --global user.email "1096011884@qq.com" 设置当前访问邮件
+
+
+5: git add chenqian.txt 向本地仓库添加一个文件
+
+    git add *  添加当前目录下所以的文件
+
+6：git commit -m "添加一个新的文件"   向本地仓库提交已经添加的文件 后面是注释
+
+
+git diff readme.txt  查看修改的内容
+
+ls 查看当前的文件
+
+git status  查看当前状态，（未添加本地库）
+
+//回退操作
+
+git reflog 查看历史提交的版本号
+
+git reset --hard HEAD^ 回退到上一个版本
+git reset --hard HEAD^^ 回退到上上一个版本
+git reset --hard HEAD~100 回退到上100个版本
+
+git reset -hard 845b05a  回退到固定的版本（845b05a ）为版本号
+
+
+git checkout --readme.txt  把readme.txt文件在工作区做的修改全部撤销
+
+
+rm readme.txt 删除文件 从硬盘删除
+git log 查看历史提交记录
+
+
+
+发布 到远程 仓库  origin 为主机名
+
+  git remote add origin https://github.com/chenqian19911214/chenqiantext.git 建立远程仓库的链接
+  
+  git push  -u  master 把当前分支master推送到远程  第一次 提交
+  git push origin master  以后提交
+
+
+ 
+   
+   
+   
+   git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作
+
+   git stash list 查看所有被隐藏的文件列表
+
+   git stash apply 恢复被隐藏的文件，但是内容不删除
+
+   git stash drop 删除文件
+
+   git stash pop 恢复文件的同时 也删除文件
+   
+   
+   
+  从远程仓库拉去代码 克隆机名（拉取代码）
+  
+     git clone https://github.com/chenqian19911214/chenqiantext.git G:\Projects\copegit 该命令会在本地主机生成一个目录
+ 
+     git clone -o jQuery https://github.com/jquery/jquery.git  克隆是指定主机名 为 JQuery
+   
+  
+ git remote 管理主机
+ 
+     git remote 要查看远程库的信息 
+ 
+    git remote –v 查看远程库的详细信息
+    
+    git remote show origin 可以查看该主机的详细信息。(origin 为主机名)
+    
+    git remote add origin_one https://github.com/chenqian19911214/chenqiantext.git 在远程添加一个主机
+    
+    git remote rm  origin_one 删除一个远程主机
+    
+    git remote rename   origin_one origin_two 远程主机名的修改
+ 
+ git fetch  更新本地数据 （相对于 Updatd）
+ 
+   git fetch origin_one master ( git fetch 主机名 分支名)
+
+   分支
+  
+   查看分支：git branch
+
+   创建分支：git branch name
+   
+   查看远程分支：git branch -r 
+
+   查看所有分支：git branch -a
+   
+   切换分支：git checkout name
+
+   创建+切换分支：git checkout –b name
+   
+   在origin/master 分支的基础上再新建一个分支 
+   git checkout -b newBrach origin/master 
+
+   合并某分支到当前分支：git merge name
+
+   删除分支：git branch –d name
+ 
+ git  pull  所取回的更新
+ 
+   git pull origin next:master (git pull <远程主机名> <远程分支名>:<本地分支名>)
+ 
+   git pull origin next(如果远程分支是与当前分支合并，则冒号后面的部分可以省略。)
+
+   git pull -p (在本地删除远程已经删除的分支)
+   
+   
+######################################centos 系
+统 及 svn 常用命令 ###############################################
+
+https://blog.csdn.net/huangjingqian/article/details/53893927  CentOS 安装java教程
+https://www.linuxidc.com/Linux/2017-03/141300.htm             CentOS 安装mysql教程
+http://150.109.46.27:3690/testsvn
+
+
+htpasswd -c /usr/lib/squid/passwd user1 为代理添加用户
+  
+  3128
+  
+svnserve -d -r /projects/svn/testsvn            启动svn 服务 /projects/svn/testsvn 为svn 路径
+
+netstat -antlp|grep svnserve  查看svn 端口
+
+ps aux | grep svn 查看svn 进程
+
+kill -s 9 2425 杀死 svn 进程
+
+
+systemctl stop firewalld.service 关闭防火墙
+systemctl start firewalld.service 开启防火墙
+systemctl status firewalld.service 查询防火墙的状态
+
+firewall-cmd --zone=public --add-port=3690/tcp --permanent 永久开启3096端口
+命令含义：
+
+ 
+--zone #作用域
+ 
+--add-port=80/tcp  #添加端口，格式为：端口/通讯协议
+ 
+--permanent   #永久生效，没有此参数重启后失效
+
+firewall-cmd --reload
+
+rpm -qa | grep java 查看系统是否存在相关软件
+yum repolist enabled | grep mysql 查看已经安装软件的版本
+
+systemctl start rngd 启动rngd服务
+
+systemctl enable tomcat.service
+systemctl disable tomcat.service
+systemctl start tomcat.service
+systemctl stop tomcat.service
+systemctl restart tomcat.service
+

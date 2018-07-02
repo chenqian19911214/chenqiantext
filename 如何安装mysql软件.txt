@@ -1,0 +1,253 @@
+mysql-5.6.17-win32免安装版配置详解
+
+
+mysql_5.7 以上免安装教程 
+http://www.jb51.net/article/106786.htm
+
+工具/原料
+windows 2003 R2
+
+mysql-5.6.17-win32.zip
+
+方法/步骤
+下载mysql-5.6.17-win32；官网下载地址百度
+
+解压到自定义目录，我这里演示的是D:\wamp\mysql\
+
+复制根目录下的my-default.ini,改名为my.ini用下面内容替换
+
+#以下是复制内容，这行可不复制
+
+[client]
+
+port=3306
+
+default-character-set=utf8
+
+#客户端字符类型，与服务端一致就行，建议utf8
+
+[mysqld]
+
+port=3306
+
+character_set_server=utf8
+
+#服务端字符类型，建议utf8
+
+basedir=D:\wamp\mysql
+
+#解压根目录
+
+datadir=D:\wamp\mysql\data
+
+#解压根目录\data
+
+sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
+
+[WinMySQLAdmin]
+
+D:\wamp\mysql\bin\mysqld.exe
+
+#解压根目录\bin\mysqld.exe
+
+#以上是复制内容，这行可不复制
+
+环境变量配置
+
+我的电脑-属性-高级-环境变量-新建
+
+变量MYSQL_HOME 值D:\wamp\mysql
+
+找到变量path 编辑，在后面加上 ;%MYSQL_HOME%\bin
+
+运行中输入cmd ,或找到C:\Windows\System32\cmd.exe,进入mysql解压目录bin子目录下，
+
+C:\Documents and Settings\Administrator>cd\
+
+C:\>d:
+
+D:\>cd wamp
+
+D:\wamp>cd mysql
+
+D:\wamp\mysql>cd bin
+
+D:\wamp\mysql\bin>
+
+D:\wamp\mysql\bin>mysqld -install
+
+提示：Service successfully installed.及即安装成功。
+
+（CMD命令：CD\ 返回根目录
+
+D: 进入D盘
+
+cd wamp 进入WAMP文件夹）
+
+这里启动服务，方便下一步操作。
+
+修改root密码：
+
+运行中输入cmd ，跳到安装目录/bin下,
+
+D:\wamp\mysql\bin>mysql -u root
+
+mysql>show databases;
+
+mysql>use mysql;
+
+mysql>delete from User where User="";
+
+mysql>update User set Password=PASSWORD('1111') where User='root';
+
+mysql>flush prvileges;
+
+mysql>quit;
+
+FLUSH PRIVILEGES:强制让MySQL重新加载权限，即刻生效
+
+此时登录时可用如下命令：
+
+D:\wamp\mysql\bin>mysql -uroot -p
+
+ENTERPASSWORD:newpassword
+
+8：常用命令
+
+mysql>show databases; 显示所有表
+
+mysql>use mysql; 切换到表mysql
+
+mysql>show tables; 显示表的结构
+
+----------------------------------------------------------------------------------
+
+
+
+1，创建数据库
+	 create database名称；
+2，查看全部数据库
+	show databases;
+3，删除数据库
+	 drop database数据库名称；
+4，打开数据库
+	USE 数据库名称；
+5，创建数据表
+	 create table表名称（名称 数据类型，）；
+6，查看数据表的结构
+	 show columns from数据表名称；
+	DESC 数据表名称；
+7，向数据表中写入内容
+	INSERT 表名称 INSERT VALUES()；
+	INSERT 表名称 （给某一段类型赋值）VALUES();
+8，将数据添加到表中
+	alter table 表名称 add 添加的数据；
+9，删除表
+	drop table 表名称；
+10，更改表内的数据
+	update 表名 表内要更改的数据
+11，删除表内数据
+	delete from 表名 where 表内数据判断
+12，查看所有的表
+	show tables;
+13,查看表里的类容；
+	desc 文件名;
+
+14:查看表里的类容 
+
+	 select  * from relation;
+启动MYSQL服务：net start mysql
+
+停止MYSQL服务：net stop mysql
+
+移出mysql服务：mysqld -remove
+
+安装mysql服务 mysqld --install MySQL（到mysql安装目录的bin目录下执行该指令）
+删除mysql服务
+——————————————————————————————————————————————————————
+//创建数据库
+create database gec_test character set utf8 collate utf8_general_ci;
+//打开数据库
+use gec_test;
+//建表
+create table t_produce(
+id int  primary key  Auto_increment,
+name varchar(20),
+description varchar(20),
+price double
+) charset = utf8;
+
+//插入数据
+insert into t_produce (name,description,price) VALUES('张三','今年23岁',13.32);
+insert into t_produce (name,description,price) VALUES('王五','天资聪明',133.2);
+insert into t_produce (name,description,price) VALUES('李四','笨蛋一个',134.54);
+
+//修改数据
+update t_produce set name='chenqian' where id=10;
+update t_produce set name='陈倩' where id=12;
+
+//保存修改
+flush privileges;
+quit;
+//删除数据
+delete from t_produce where id=2;
+delete from t_produce where id=4;
+//查询数据库
+ select* from t_produce；
+ select  name  from t_produce；单字段查询
+ select  name ,age,user from t_produce；多字段查询
+ select *from t_produce where id=11;按条件查询
+ 
+查看默认的编码格式；
+ show variables like "%char%";
+ 
+ 修改数据库编码格式；
+ set names utf8
+ 
+ set character_set_database=utf8;
+ set character_set_filesystem=utf8;
+ set character_set_server=utf8;
+ 
+ 查看test数据库的编码格式；
+ show create database test;
+
+
+
+
+修改 mysql 登陆密码（忘记情况下）
+1. 关闭正在运行的MySQL服务。 
+2. 打开DOS窗口，转到mysql\bin目录。 
+3. 输入mysqld --skip-grant-tables 回车。--skip-grant-tables 的意思是启动MySQL服务的时候跳过权限表认证。 
+4. 再开一个DOS窗口（因为刚才那个DOS窗口已经不能动了），转到mysql\bin目录。 
+5. 输入mysql回车，如果成功，将出现MySQL提示符 >。 
+6. 连接权限数据库： use mysql; 。 
+6. 改密码：update user set password=password("123") where user="root";（别忘了最后加分号） 。 
+
+        5.7版本后update user set authentication_string=password('123qwe') where user='root';
+7. 刷新权限（必须步骤）：flush privileges;　。 
+8. 退出 quit。 
+9. 注销系统，再进入，使用用户名root和刚才设置的新密码123登录。
+*************************************************************
+adb调试桥常用命令
+
+adb logcat 查看输出日志
+adb aevices 列出已经打开的模拟器；
+reset adb 重新启动adb；
+adb start server 打开adb；
+adb kill-server  关闭adb；
+netatart  -ano  查看端口占用的情况；
+adb install  软件名.apk安装一个应用程序；
+adb uninstall 包名   卸载一个软件
+adb pull 路径+文件名   导出；
+adb push  路径+文件名  导入；
+adb shell am start  -n   包名/主活动名      启动一个软件
+adb shell链接到手机；
+   	 ls  显示出目录结构；
+	ps 显示进程；
+	ping 显示网络；
+	rm   删除；
+	pwd 打印当前工作目录；
+	cat 查看目录中的文件；
+	cd  切换工作目录；
+	pm 包管理器；
+	exit 退出；
