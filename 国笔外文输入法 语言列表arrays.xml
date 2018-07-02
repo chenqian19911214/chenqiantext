@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="KeyboardEntries">
+        <item>Qwerty</item>
+        <item>Qwertz</item>
+        <item>Azerty</item>
+        <item>Qzerty</item>
+        <item>Abcdef</item>
+        <item>@string/default_keyboard</item>
+    </string-array>
+    <string-array name="KeyboardEntryValues">
+        <item>Qwerty</item>
+        <item>Qwertz</item>
+        <item>Azerty</item>
+        <item>Qzerty</item>
+        <item>Abcdef</item>
+        <item>@string/default_keyboard</item>
+    </string-array>
+    <string-array name="PopupSetting">
+        <item>@string/lanuage_setting</item>
+        <item>@string/prediction_setting</item>
+        <item>@string/item_share</item>
+        <item>@string/more_setting</item>
+    </string-array>
+    <string-array name="SkinEntries">
+    </string-array>
+    <string-array name="SkinEntryValues">
+        <item>Default</item>
+    </string-array>
+    <string-array name="AutoUpdateEntries">
+        <item>@string/auto_update_7_days</item>
+        <item>@string/auto_update_15_days</item>
+        <item>@string/auto_update_30_days</item>
+        <item>@string/auto_update_disable</item>
+    </string-array>
+    <string-array name="AutoUpdateEntryValues">
+        <item>7</item>
+        <item>15</item>
+        <item>30</item>
+        <item>9999</item>
+    </string-array>
+    <string-array name="EmailSymols">
+        <item>\@yahoo</item>
+        <item>\@hotmail</item>
+        <item>\@</item>
+        <item>.com</item>
+        <item>\@gmail</item>
+    </string-array>
+    <string-array name="UrlSymols">
+        <item>.org</item>
+        <item>.net</item>
+        <item>/</item>
+        <item>www.</item>
+        <item>.com</item>
+        <item>.cn</item>
+    </string-array>
+    <string-array name="PasswordSymols">
+        <item>*</item>
+        <item>#</item>
+        <item>~</item>
+        <item>_</item>
+        <item>-</item>
+        <item>/</item>
+        <item>\\</item>
+        <item>&amp;</item>
+    </string-array>
+    <string-array name="LanguageFullIsoName">
+        <item>(Arabic)‎ اللغة العربية_ar</item>
+        <item>Беларускі (Belarusian)_Be</item>
+        <item>български (Bulgarian)_Bg</item>
+        <item>বাংলা (Bengali)_bn</item>
+        <item>Ελληνικά (Greek)_el</item>
+        <item>(Farsi) فارسی_fa</item>
+        <item>(Hebrew) עברית_he</item>
+        <item>Hinglish_hi_EN</item>
+        <item>मानक हिन्दी  (Hindi)_hi_HI</item>
+        <item>ქართული (Georgian)_Ka</item>
+        <item>(Kazakh) قازاق ٴتىلى‎‏_kk_cn</item>
+        <item>ಕನ್ನಡ (Kannada)_kn</item>
+        <item>(Kyrgyz) قىرعىز تىلى_ky_cn</item>
+        <item>Кыргызча (Kyrgyz)_Ky_KG</item>
+        <item>Afrikaans_Af</item>
+        <item>Bosanski (Bosnian)_Bs</item>
+        <item>Català (Catalan)_ca</item>
+        <item>Čeština (Czech)_Cs</item>
+        <item>Dansk (Danish)_da</item>
+        <item>Deutsch (German)_De</item>
+        <item>English_En</item>
+        <item>Español (Spanish South America)_es_SA</item>
+        <item>Español (Spanish Europe)_es_SP</item>
+        <item>Eesti keel (Estonian)_et</item>
+        <item>Euskara (Basque)_Eu</item>
+        <item>Suomi (Finnish)_Fi</item>
+        <item>Français (French)_Fr</item>
+        <item>Gaeilge (Irish)_ga</item>
+        <item>Hausa_Ha</item>
+        <item>Hrvatski (Croatian)_hr</item>
+        <item>Magyar (Hungarian)_hu</item>
+        <item>Bahasa Indonesia (Indonesian)_Id</item>
+        <item>Íslenska (Icelandic)_Is</item>
+        <item>Italiano (Italian)_It</item>
+        <item>Kurdî (Kurdish)_Ku</item>
+        <item>Lietuvių (Lithuanian)_Lt</item>
+        <item>Latviešu (Latvian)_Lv</item> 
+        <item>Malagasy_Mg</item>
+        <item>Bahasa Melayu (Malay)_Ms</item>
+        <item>Netherlands (Dutch)_Nl</item>
+        <item>Norsk (Norwegian)_no</item>
+        <item>Język polski (Polish)_pl</item>
+        <item>Português (Portuguese Europe)_pt_PT</item>
+        <item>Português (Portuguese South America)_pt_SA</item>
+        <item>Limba română (Romanian)_ro</item>
+        <item>Slovenčina (Slovak)_sk</item>
+        <item>Slovenščina (Slovenian)_sl</item>
+        <item>Shqipe (Albanian)_Sq</item>
+        <item>Srpski (Serbian)_sr</item> 
+        <item>Svenskar (Swedish)_Sv</item>
+        <item>Kiswahili (Swahili)_sw</item>
+        <item>Tagalog (Filipino)_tl</item>
+        <item>Türkçe (Turkish)_Tr</item>
+        <item>U\'zbek (Uzbek)_Uz</item>
+        <item>Tiếng Việt (Vietnamese)_Vi</item>
+        <item>Zhuang_za</item>
+        <item>Монгол хэл (Mongolian)_Mn_MN</item>
+        <item>नेपाली (Nepali)_ne</item>
+        <item>(Pashto) پښتو_ps</item>
+        <item>Русский язык (Russian)_ru</item>
+        <item>தமிழ் (Tamil)_ta</item>
+        <item>తెలుగు (Telugu)_te</item>
+        <item>ภาษาไทย (Thai)_th</item>
+        <item>(Uighur) ئۇيغۇر يېزىقى‏_ug</item>
+        <item>українська (Ukrainian)_Uk</item>
+        <item>(Urdu) اُردو‏‎_ur</item> 
+		
+		
+		 Hindi（印地语）           Gujarati 《古吉拉特语》
+		, Tamil （泰米尔语）      Marathi《马拉地语》	
+		, Kannada（埃纳德语）    Punjabi《旁遮普语》
+		, Urdu（乌尔都语）        Sanskrit《梵文，梵语》
+         ,Nepali（尼泊尔语） 	   Odia《》
+		, Bengali（孟加拉语）     Malayalam《印度西南部的 Dravidian 语的一方言》
+	    ,Telugu（泰卢固语）       Assamese《阿萨姆语》
+	                               Sindhi
+	                               Santali《桑塔利语》
+	                               Manipuri《曼尼普尔语》
+		                           Maithili《迈蒂利语》
+		                           Konkani
+		                           Kashmiri《克什米尔》
+		                           Dogri《多格拉语》
+		                           Bodo 
+		 		
+ <!--Language = 1         id =  2131034335    isoName = ar     ShortName = AR     <item>(Arabic)‎ اللغة العربية_ar</item> 阿拉伯语
+     Language = 35        id =  2131034336    isoName = be     ShortName = Be     <item>Беларускі (Belarusian)_Be</item> 白俄罗斯语
+     Language = 2         id =  2131034337    isoName = bg     ShortName = Bg     <item>български (Bulgarian)_Bg</item> 保加利亚人
+     Language = 1093      id =  2131034338    isoName = bn     ShortName = Bn     <item>বাংলা (Bengali)_bn</item> 孟加拉语
+     Language = 8         id =  2131034339    isoName = el     ShortName = El     <item>Ελληνικά (Greek)_el</item> 希腊语
+     Language = 41        id =  2131034340    isoName = fa     ShortName = Fa     <item>(Farsi) فارسی_fa</item> 波斯语
+     Language = 13        id =  2131034341    isoName = he     ShortName = עברית  <item>(Hebrew) עברית_he</item> 希伯来语 ！！！！！！！！！！！
+     Language = 57347     id =  2131034342    isoName = hi_EN  ShortName = Hi-e   <item>Hinglish_hi_EN</item> 印地语+英语
+     Language = 57        id =  2131034343    isoName = hi_HI  ShortName = Hi     <item>मानक हिन्दी  (Hindi)_hi_HI</item> 印地语
+     Language = 55        id =  2131034344    isoName = ka     ShortName = Ka     <item>ქართული (Georgian)_Ka</item>格鲁吉亚语 
+     Language = 63        id =  2131034345    isoName = kk_CN  ShortName = kk_cn  <item>(Kazakh) قازاق ٴتىلى‎‏_kk_cn</item> 哈萨克语
+     Language = 75        id =  2131034346    isoName = kn     ShortName = Kn     <item>ಕನ್ನಡ (Kannada)_kn</item> 埃纳德语
+     Language = 57345     id =  2131034347    isoName = ky_CN  ShortName = ky_cn  <item>(Kyrgyz) قىرعىز تىلى_ky_cn</item> 吉尔吉斯坦语
+     Language = 64        id =  2131034348    isoName = ky_KG  ShortName = Ky_kg  <item>Кыргызча (Kyrgyz)_Ky_KG</item> 吉尔吉斯坦语2
+     Language = 54        id =  2131034349    isoName = af     ShortName = Af     <item>Afrikaans_Af</item> 非洲语
+     Language = 30746     id =  2131034350    isoName = bs     ShortName = Bs     <item>Bosanski (Bosnian)_Bs</item>   波斯尼亚 (No)
+     Language = 3         id =  2131034351    isoName = ca     ShortName = Ca     <item>Català (Catalan)_ca</item> 加泰罗尼亚语
+     Language = 5         id =  2131034352    isoName = cs     ShortName = Cs     <item>Čeština (Czech)_Cs</item>捷克语！！！！！！！！！！！！！！
+     Language = 6         id =  2131034353    isoName = da     ShortName = Da     <item>Dansk (Danish)_da</item> 丹麦语
+     Language = 7         id =  2131034354    isoName = de     ShortName = De     <item>Deutsch (German)_De</item> 德语
+     Language = 9         id =  2131034355    isoName = en     ShortName = En     <item>English_En</item> 英语
+     Language = 11274     id =  2131034356    isoName = es_SA  ShortName = Es     <item>Español (Spanish South America)_es_SA</item> 西班牙南部美国
+     Language = 10        id =  2131034357    isoName = es_SP  ShortName = Es     <item>Español (Spanish Europe)_es_SP</item> 西班牙
+     Language = 37        id =  2131034358    isoName = et     ShortName = Et     <item>Eesti keel (Estonian)_et</item> 爱沙尼亚语
+     Language = 45        id =  2131034359    isoName = eu     ShortName = Eu     <item>Euskara (Basque)_Eu</item> 巴斯克语
+     Language = 11        id =  2131034360    isoName = fi     ShortName = Fi     <item>Suomi (Finnish)_Fi</item> 芬兰语
+     Language = 12        id =  2131034361    isoName = fr     ShortName = Fr     <item>Français (French)_Fr</item> 法语
+     Language = 60        id =  2131034362    isoName = ga     ShortName = Ga     <item>Gaeilge (Irish)_ga</item> 爱尔兰语
+     Language = 1128      id =  2131034363    isoName = ha     ShortName = Ha     <item>Hausa_Ha</item> 豪撒语
+     Language = 1050      id =  2131034364    isoName = hr     ShortName = Hr     <item>Hrvatski (Croatian)_hr</item>克罗地亚人语
+     Language = 14        id =  2131034365    isoName = hu     ShortName = Hu     <item>Magyar (Hungarian)_hu</item> 匈牙利语 ！！！！！！！！！！！！！！！！
+     Language = 33        id =  2131034366    isoName = id     ShortName = Id     <item>Bahasa Indonesia (Indonesian)_Id</item> 印度尼西亚语
+     Language = 15        id =  2131034367    isoName = is     ShortName = Is     <item>Íslenska (Icelandic)_Is</item> 冰岛语
+     Language = 16        id =  2131034368    isoName = it     ShortName = It     <item>Italiano (Italian)_It</item> 意大利语
+     Language = 57351     id =  2131034369    isoName = ku     ShortName = Ku     <item>Kurdî (Kurdish)_Ku</item> 库尔德语
+     Language = 39        id =  2131034370    isoName = lt     ShortName = Lt     <item>Lietuvių (Lithuanian)_Lt</item>立陶宛语
+     Language = 38        id =  2131034371    isoName = lv     ShortName = Lv     <item>Latviešu (Latvian)_Lv</item>拉脱维亚语
+     Language = 57353     id =  2131034372    isoName = mg     ShortName = Mg     <item>Malagasy_Mg</item> 马尔加什人
+     Language = 62        id =  2131034373    isoName = ms     ShortName = Ms     <item>Bahasa Melayu (Malay)_Ms</item> 马来语
+     Language = 19        id =  2131034374    isoName = nl     ShortName = Nl     <item>Netherlands (Dutch)_Nl</item> 荷兰语
+     Language = 20        id =  2131034375    isoName = no     ShortName = No     <item>Norsk (Norwegian)_no</item> 挪威语 ！！！！！！！！！！！！！！！！
+     Language = 21        id =  2131034376    isoName = pl     ShortName = Pl     <item>Język polski (Polish)_pl</item> 波兰语 ！！！！！！！！！！！！！！！！ 
+     Language = 22        id =  2131034377    isoName = pt_PT  ShortName = Pt     <item>Português (Portuguese Europe)_pt_PT</item> 葡萄牙语  欧洲
+     Language = 1046      id =  2131034378    isoName = pt_SA  ShortName = Pt     <item>Português (Portuguese South America)_pt_SA</item> 葡萄牙语  南部美国
+     Language = 24        id =  2131034379    isoName = ro     ShortName = Ro     <item>Limba română (Romanian)_ro</item> 罗马尼亚语
+     Language = 27        id =  2131034380    isoName = sk     ShortName = Sk     <item>Slovenčina (Slovak)_sk</item> 斯洛伐克人语
+     Language = 36        id =  2131034381    isoName = sl     ShortName = Sl     <item>Slovenščina (Slovenian)_sl</item> 斯洛文尼亚人语
+     Language = 28        id =  2131034382    isoName = sq     ShortName = Sq     <item>Shqipe (Albanian)_Sq</item> 阿尔巴尼亚人[语]
+     Language = 2074      id =  2131034383    isoName = sr     ShortName = Sr     <item>Srpski (Serbian)_sr</item> 塞尔维亚语 ！！！！！！！！！！！！！！！！！！
+     Language = 29        id =  2131034384    isoName = sv     ShortName = Sv     <item>Svenskar (Swedish)_Sv</item> 瑞典语 ！！！！！！！！！！！！！！！！！！！！！！！
+     Language = 1089      id =  2131034385    isoName = sw     ShortName = Sw     <item>Kiswahili (Swahili)_sw</item> 斯瓦希里语
+     Language = 13321     id =  2131034386    isoName = tl     ShortName = Tl     <item>Tagalog (Filipino)_tl</item> 菲律宾语
+     Language = 31        id =  2131034387    isoName = tr     ShortName = Tr     <item>Türkçe (Turkish)_Tr</item> 土耳其语
+     Language = 1091      id =  2131034388    isoName = uz     ShortName = Uz     <item>U\'zbek (Uzbek)_Uz</item> 乌兹别克斯坦语
+     Language = 42        id =  2131034389    isoName = vi     ShortName = Vi     <item>Tiếng Việt (Vietnamese)_Vi</item> 越南语
+     Language = 57360     id =  2131034390    isoName = za     ShortName = Za     <item>Zhuang_za</item> 壮语
+     Language = 1104      id =  2131034391    isoName = mn_MN  ShortName = Mn_mn  <item>Монгол хэл (Mongolian)_Mn_MN</item> 蒙古族语
+     Language = 97        id =  2131034392    isoName = ne     ShortName = Ne     <item>नेपाली (Nepali)_ne</item> 尼泊尔语
+     Language = 99        id =  2131034393    isoName = ps     ShortName = Ps     <item>(Pashto) پښتو_ps</item> 普什图语
+     Language = 25        id =  2131034394    isoName = ru     ShortName = Ru     <item>Русский язык (Russian)_ru</item> 俄语
+     Language = 1097      id =  2131034395    isoName = ta     ShortName = Ta     <item>தமிழ் (Tamil)_ta</item> 泰米尔语
+     Language = 1098      id =  2131034396    isoName = te     ShortName = Te     <item>తెలుగు (Telugu)_te</item> 泰卢固语
+     Language = 30        id =  2131034397    isoName = th     ShortName = กขค              <item>ภาษาไทย (Thai)_th</item> 越南语 泰国
+     Language = 128       id =  2131034398    isoName = ug     ShortName = Ug     <item>(Uighur) ئۇيغۇر يېزىقى‏_ug</item> 维吾尔文 (No)
+     Language = 34        id =  2131034399    isoName = uk     ShortName = Uk     <item>українська (Ukrainian)_Uk</item> 乌克兰语
+     Language = 32        id =  2131034400    isoName = ur     ShortName = Ur     <item>(Urdu) اُردو‏‎_ur</item> 乌尔都语 --  switchLanguage>
+               
+    </string-array>
+
+</resources>
