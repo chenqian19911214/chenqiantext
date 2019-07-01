@@ -1,51 +1,51 @@
-adb ³£ÓÃÃüÁî´óÈ«
+adb å¸¸ç”¨å‘½ä»¤å¤§å…¨
 
 
 WGadmin@guobi.com
 guobi2468
-Á´½Ó£ºhttp://pan.baidu.com/s/1eRHD9BG ÃÜÂë£ºopqc 
-ÏÂÔØºó,Çï¼¾°æ¿­Á¢µÂ,°ÑÎÄ¼şÃû¸Ä³Énavione, ¸´ÖÆµ½¿¨Àï´úÌæÔ­À´µÄÎÄ¼ş¼Ğ
+é“¾æ¥ï¼šhttp://pan.baidu.com/s/1eRHD9BG å¯†ç ï¼šopqc 
+ä¸‹è½½å,ç§‹å­£ç‰ˆå‡¯ç«‹å¾·,æŠŠæ–‡ä»¶åæ”¹æˆnavione, å¤åˆ¶åˆ°å¡é‡Œä»£æ›¿åŸæ¥çš„æ–‡ä»¶å¤¹
 
-Netsh winsock reset  ´ÓĞÂÆô¶¯ä¯ÀÀÆ÷
+Netsh winsock reset  ä»æ–°å¯åŠ¨æµè§ˆå™¨
 netsh advfirewall reset
 
-adb shell logcat "¹ıÂËÆ÷Ãû×Ö":i  *:s  ÓÃÃüÁîĞĞ²é¿´Êı¾İ
+adb shell logcat "è¿‡æ»¤å™¨åå­—":i  *:s  ç”¨å‘½ä»¤è¡ŒæŸ¥çœ‹æ•°æ®
 
 adb shell logcat "json":i  *:s
 
-adb shell logcat  com.bmob.im.demo :e  *s Êä³ö´íÎóĞÅÏ¢
+adb shell logcat  com.bmob.im.demo :e  *s è¾“å‡ºé”™è¯¯ä¿¡æ¯
 
-1. ÏÔÊ¾ÏµÍ³ÖĞÈ«²¿AndroidÆ½Ì¨£º
+1. æ˜¾ç¤ºç³»ç»Ÿä¸­å…¨éƒ¨Androidå¹³å°ï¼š
     android list targets
-2. ÏÔÊ¾ÏµÍ³ÖĞÈ«²¿AVD£¨Ä£ÄâÆ÷£©£º
+2. æ˜¾ç¤ºç³»ç»Ÿä¸­å…¨éƒ¨AVDï¼ˆæ¨¡æ‹Ÿå™¨ï¼‰ï¼š
     android list avd
-3. ´´½¨AVD£¨Ä£ÄâÆ÷£©£º
-    android create avd --name Ãû³Æ --target Æ½Ì¨±àºÅ
-4. Æô¶¯Ä£ÄâÆ÷£º
-    emulator -avd Ãû³Æ -sdcard ~/Ãû³Æ.img (-skin 1280x800)
-5. É¾³ıAVD£¨Ä£ÄâÆ÷£©£º
-    android delete avd --name Ãû³Æ
-6. ´´½¨SDCard£º
-    mksdcard 1024M ~/Ãû³Æ.img
-7. AVD(Ä£ÄâÆ÷)ËùÔÚÎ»ÖÃ£º
+3. åˆ›å»ºAVDï¼ˆæ¨¡æ‹Ÿå™¨ï¼‰ï¼š
+    android create avd --name åç§° --target å¹³å°ç¼–å·
+4. å¯åŠ¨æ¨¡æ‹Ÿå™¨ï¼š
+    emulator -avd åç§° -sdcard ~/åç§°.img (-skin 1280x800)
+5. åˆ é™¤AVDï¼ˆæ¨¡æ‹Ÿå™¨ï¼‰ï¼š
+    android delete avd --name åç§°
+6. åˆ›å»ºSDCardï¼š
+    mksdcard 1024M ~/åç§°.img
+7. AVD(æ¨¡æ‹Ÿå™¨)æ‰€åœ¨ä½ç½®ï¼š
     Linux(~/.android/avd)      Windows(C:\Documents and Settings\Administrator\.android\avd)
-8. Æô¶¯DDMS£º
+8. å¯åŠ¨DDMSï¼š
 
 
 yes365cc@gmail.com
     ddms
-9. ÏÔÊ¾µ±Ç°ÔËĞĞµÄÈ«²¿Ä£ÄâÆ÷£º
+9. æ˜¾ç¤ºå½“å‰è¿è¡Œçš„å…¨éƒ¨æ¨¡æ‹Ÿå™¨ï¼š
     adb devices
-10. ¶ÔÄ³Ò»Ä£ÄâÆ÷Ö´ĞĞÃüÁî£º
-      adb -s Ä£ÄâÆ÷±àºÅ ÃüÁî
+10. å¯¹æŸä¸€æ¨¡æ‹Ÿå™¨æ‰§è¡Œå‘½ä»¤ï¼š
+      adb -s æ¨¡æ‹Ÿå™¨ç¼–å· å‘½ä»¤
 
-	ÀıÈç Á´½ÓÄ³Ò»¸öÉè±¸ adb -s 3e809e7e(Éè±¸Ãû) shell (ÃüÁî)
-11. °²×°Ó¦ÓÃ³ÌĞò£º
-      adb install -r Ó¦ÓÃ³ÌĞò.apk
+	ä¾‹å¦‚ é“¾æ¥æŸä¸€ä¸ªè®¾å¤‡ adb -s 3e809e7e(è®¾å¤‡å) shell (å‘½ä»¤)
+11. å®‰è£…åº”ç”¨ç¨‹åºï¼š
+      adb install -r åº”ç”¨ç¨‹åº.apk
 
 	adb install -r GBIME_zh.apk
 
-adb uninstall °üÃû   Ğ¶ÔØÒ»¸öÈí¼ş
+adb uninstall åŒ…å   å¸è½½ä¸€ä¸ªè½¯ä»¶
 
 adb uninstall com.guobi.gbime
 
@@ -58,364 +58,370 @@ adb remount && adb push GuoBiIME_Alphabet_en.apk system/app/GuoBiIME_Alphabet_en
 adb remount && adb push com.guobi.gbime.apk data/local/tmp/ && adb reboot
 
 
-mount -o rw,remount /system  É¾³ıÏµÍ³ÎÄ¼şÇ°µÄÈ¨ÏŞĞŞ¸Ä
+mount -o rw,remount /system  åˆ é™¤ç³»ç»Ÿæ–‡ä»¶å‰çš„æƒé™ä¿®æ”¹
 
 
-12. »ñÈ¡Ä£ÄâÆ÷ÖĞµÄÎÄ¼ş£º
-      adb pull ÊÖ»úµÄÎÄ¼şÂ·¾¶ pc´æ´¢µÄÂ·¾¶  adb pull system/remrew/rm.jar  h:
-13. ÏòÄ£ÄâÆ÷ÖĞĞ´ÎÄ¼ş£º
-      adb push ÎÄ¼şÃû Â·¾¶
-14. ½øÈëÄ£ÄâÆ÷µÄshellÄ£Ê½£º
+12. è·å–æ¨¡æ‹Ÿå™¨ä¸­çš„æ–‡ä»¶ï¼š
+      adb pull æ‰‹æœºçš„æ–‡ä»¶è·¯å¾„ pcå­˜å‚¨çš„è·¯å¾„  adb pull system/remrew/rm.jar  h:
+13. å‘æ¨¡æ‹Ÿå™¨ä¸­å†™æ–‡ä»¶ï¼š
+      adb push æ–‡ä»¶å è·¯å¾„
+14. è¿›å…¥æ¨¡æ‹Ÿå™¨çš„shellæ¨¡å¼ï¼š
       adb shell
-15. Æô¶¯SDK£¬ÎÄµµ£¬ÊµÀıÏÂÔØ¹ÜÀíÆ÷£º
+15. å¯åŠ¨SDKï¼Œæ–‡æ¡£ï¼Œå®ä¾‹ä¸‹è½½ç®¡ç†å™¨ï¼š
       android
-16. À‹ÔØapk°ü£º
+16. ç¼·è½½apkåŒ…ï¼š
       adb shell
       cd data/app
-      rm apk°ü
+      rm apkåŒ…
       exit
-      adb uninstall apk°üµÄÖ÷°üÃû
-      adb install -r apk°ü
-17. ²é¿´adbÃüÁî°ïÖúĞÅÏ¢£º
+      adb uninstall apkåŒ…çš„ä¸»åŒ…å
+      adb install -r apkåŒ…
+17. æŸ¥çœ‹adbå‘½ä»¤å¸®åŠ©ä¿¡æ¯ï¼š
       adb help
-18. ÔÚÃüÁîĞĞÖĞ²é¿´LOGĞÅÏ¢£º
-      adb logcat -s ±êÇ©Ãû
-19. adb shellºóÃæ¸úµÄÃüÁîÖ÷ÒªÀ´×Ô£º
-      Ô´Âë\system\core\toolboxÄ¿Â¼ºÍÔ´Âë\frameworks\base\cmdsÄ¿Â¼¡£
-20. É¾³ıÏµÍ³Ó¦ÓÃ£º
-      adb remount £¨ÖØĞÂ¹ÒÔØÏµÍ³·ÖÇø£¬Ê¹ÏµÍ³·ÖÇøÖØĞÂ¿ÉĞ´£©¡£
+18. åœ¨å‘½ä»¤è¡Œä¸­æŸ¥çœ‹LOGä¿¡æ¯ï¼š
+      adb logcat -s æ ‡ç­¾å
+19. adb shellåé¢è·Ÿçš„å‘½ä»¤ä¸»è¦æ¥è‡ªï¼š
+      æºç \system\core\toolboxç›®å½•å’Œæºç \frameworks\base\cmdsç›®å½•ã€‚
+20. åˆ é™¤ç³»ç»Ÿåº”ç”¨ï¼š
+      adb remount ï¼ˆé‡æ–°æŒ‚è½½ç³»ç»Ÿåˆ†åŒºï¼Œä½¿ç³»ç»Ÿåˆ†åŒºé‡æ–°å¯å†™ï¼‰ã€‚
       adb shell
       cd system/app
       rm *.apk
 
-21. »ñÈ¡¹ÜÀíÔ±È¨ÏŞ£º
+21. è·å–ç®¡ç†å‘˜æƒé™ï¼š
       adb root
-      mount -o rw,remount /system ĞŞ¸ÄsystemÄ¿Â¼µÄÈ¨ÏŞ
+      mount -o rw,remount /system ä¿®æ”¹systemç›®å½•çš„æƒé™
       
-22. Æô¶¯Activity£º
-      adb shell am start -n °üÃû/°üÃû£«ÀàÃû£¨-n ÀàÃû,-a action,-d date,-m MIME-TYPE,-c category,-e À©Õ¹Êı¾İ,µÈ£©¡£
+22. å¯åŠ¨Activityï¼š
+      adb shell am start -n åŒ…å/åŒ…åï¼‹ç±»åï¼ˆ-n ç±»å,-a action,-d date,-m MIME-TYPE,-c category,-e æ‰©å±•æ•°æ®,ç­‰ï¼‰ã€‚
       adb shell am start -n com.android.email/com.android.email2.ui.MailActivityEmail
-23¡¢·¢²¼¶Ë¿Ú£º
-    Äã¿ÉÒÔÉèÖÃÈÎÒâµÄ¶Ë¿ÚºÅ£¬×öÎªÖ÷»úÏòÄ£ÄâÆ÷»òÉè±¸µÄÇëÇó¶Ë¿Ú¡£Èç£º 
+23ã€å‘å¸ƒç«¯å£ï¼š
+    ä½ å¯ä»¥è®¾ç½®ä»»æ„çš„ç«¯å£å·ï¼Œåšä¸ºä¸»æœºå‘æ¨¡æ‹Ÿå™¨æˆ–è®¾å¤‡çš„è¯·æ±‚ç«¯å£ã€‚å¦‚ï¼š 
 adb forward tcp:5555 tcp:8000
-24¡¢¸´ÖÆÎÄ¼ş£º
-    Äã¿ÉÏòÒ»¸öÉè±¸»ò´ÓÒ»¸öÉè±¸ÖĞ¸´ÖÆÎÄ¼ş£¬ 
-     ¸´ÖÆÒ»¸öÎÄ¼ş»òÄ¿Â¼µ½Éè±¸»òÄ£ÄâÆ÷ÉÏ£º 
+24ã€å¤åˆ¶æ–‡ä»¶ï¼š
+    ä½ å¯å‘ä¸€ä¸ªè®¾å¤‡æˆ–ä»ä¸€ä¸ªè®¾å¤‡ä¸­å¤åˆ¶æ–‡ä»¶ï¼Œ 
+     å¤åˆ¶ä¸€ä¸ªæ–‡ä»¶æˆ–ç›®å½•åˆ°è®¾å¤‡æˆ–æ¨¡æ‹Ÿå™¨ä¸Šï¼š 
 
-  adb remount ,ÒâË¼ÊÇ½«Éè±¸¸ÄÎª¿É¶Á¿ÉĞ´
+  adb remount ,æ„æ€æ˜¯å°†è®¾å¤‡æ”¹ä¸ºå¯è¯»å¯å†™
   adb push 
 
-      Èç£ºadb 
+      å¦‚ï¼šadb 
 adb push test.txt /tmp/test.txt 
-´ÓÉè±¸»òÄ£ÄâÆ÷ÉÏ¸´ÖÆÒ»¸öÎÄ¼ş»òÄ¿Â¼£º 
+ä»è®¾å¤‡æˆ–æ¨¡æ‹Ÿå™¨ä¸Šå¤åˆ¶ä¸€ä¸ªæ–‡ä»¶æˆ–ç›®å½•ï¼š 
      adb 
 pull <source> 
 <destination></destination></source> 
-     Èç£ºadb 
+     å¦‚ï¼šadb 
 adb pull /addroid/lib/libwebcore.so .
 
 adb pull /data/data/com.android.providers.contacts/databases/contacts2.db H:\QQPCmgr\Desktop\DCIM
-25¡¢ËÑË÷Ä£ÄâÆ÷/Éè±¸µÄÊµÀı£º
-     È¡µÃµ±Ç°ÔËĞĞµÄÄ£ÄâÆ÷/Éè±¸µÄÊµÀıµÄÁĞ±í¼°Ã¿¸öÊµÀıµÄ×´Ì¬£º 
+25ã€æœç´¢æ¨¡æ‹Ÿå™¨/è®¾å¤‡çš„å®ä¾‹ï¼š
+     å–å¾—å½“å‰è¿è¡Œçš„æ¨¡æ‹Ÿå™¨/è®¾å¤‡çš„å®ä¾‹çš„åˆ—è¡¨åŠæ¯ä¸ªå®ä¾‹çš„çŠ¶æ€ï¼š 
     adb devices
-26¡¢²é¿´bug±¨¸æ£º 
+26ã€æŸ¥çœ‹bugæŠ¥å‘Šï¼š 
 adb bugreport 
-27¡¢¼ÇÂ¼ÎŞÏßÍ¨Ñ¶ÈÕÖ¾£º
-    Ò»°ãÀ´Ëµ£¬ÎŞÏßÍ¨Ñ¶µÄÈÕÖ¾·Ç³£¶à£¬ÔÚÔËĞĞÊ±Ã»±ØÒªÈ¥¼ÇÂ¼£¬µ«ÎÒÃÇ»¹ÊÇ¿ÉÒÔÍ¨¹ıÃüÁî£¬ÉèÖÃ¼ÇÂ¼£º 
+27ã€è®°å½•æ— çº¿é€šè®¯æ—¥å¿—ï¼š
+    ä¸€èˆ¬æ¥è¯´ï¼Œæ— çº¿é€šè®¯çš„æ—¥å¿—éå¸¸å¤šï¼Œåœ¨è¿è¡Œæ—¶æ²¡å¿…è¦å»è®°å½•ï¼Œä½†æˆ‘ä»¬è¿˜æ˜¯å¯ä»¥é€šè¿‡å‘½ä»¤ï¼Œè®¾ç½®è®°å½•ï¼š 
     adb shell 
-	logcat | grep 25783 (PID) ¹ıÂË°üÃû£º 
+	logcat | grep 25783 (PID) è¿‡æ»¤åŒ…åï¼š 
     logcat -b radio
-28¡¢»ñÈ¡Éè±¸µÄIDºÍĞòÁĞºÅ£º
+28ã€è·å–è®¾å¤‡çš„IDå’Œåºåˆ—å·ï¼š
      adb get-product 
      adb get-serialno
-29¡¢·ÃÎÊÊı¾İ¿âSQLite3
+29ã€è®¿é—®æ•°æ®åº“SQLite3
      adb shell 
      sqlite3
-#cd system/sd/data //½øÈëÏµÍ³ÄÚÖ¸¶¨ÎÄ¼ş¼Ğ 
-#ls //ÁĞ±íÏÔÊ¾µ±Ç°ÎÄ¼ş¼ĞÄÚÈİ 
-#rm -r xxx //É¾³ıÃû×ÖÎªxxxµÄÎÄ¼ş¼Ğ¼°ÆäÀïÃæµÄËùÓĞÎÄ¼ş 
-#rm xxx //É¾³ıÎÄ¼şxxx 
-#rmdir xxx //É¾³ıxxxµÄÎÄ¼ş¼Ğ
+#cd system/sd/data //è¿›å…¥ç³»ç»Ÿå†…æŒ‡å®šæ–‡ä»¶å¤¹ 
+#ls //åˆ—è¡¨æ˜¾ç¤ºå½“å‰æ–‡ä»¶å¤¹å†…å®¹ 
+#rm -r xxx //åˆ é™¤åå­—ä¸ºxxxçš„æ–‡ä»¶å¤¹åŠå…¶é‡Œé¢çš„æ‰€æœ‰æ–‡ä»¶ 
+#rm xxx //åˆ é™¤æ–‡ä»¶xxx 
+#rmdir xxx //åˆ é™¤xxxçš„æ–‡ä»¶å¤¹
 
-****************************************************************************************************²é¿´wind10 ÏµÍ³¼¤»îÏêÇé
-
-
-1.Win+R===>ÊäÈë slmgr.vbs -dlv   ÏÔÊ¾£º×îÎªÏê¾¡µÄ¼¤»îĞÅÏ¢£¬°üÀ¨£º¼¤»îID¡¢°²×°ID¡¢¼¤»î½ØÖ¹ÈÕÆÚ
-2.Win+R===>ÊäÈë slmgr.vbs -dli   ÏÔÊ¾£º²Ù×÷ÏµÍ³°æ±¾¡¢²¿·Ö²úÆ·ÃÜÔ¿¡¢Ğí¿ÉÖ¤×´Ì¬
-3.Win+R===>ÊäÈë slmgr.vbs -xpr   ÏÔÊ¾£ºÊÇ·ñ³¹µ×¼¤»î
-4.Win+R===>ÊäÈë slmgr.vbs -ato   ÏÔÊ¾¼¤»î×´Ì¬¡£
+****************************************************************************************************æŸ¥çœ‹wind10 ç³»ç»Ÿæ¿€æ´»è¯¦æƒ…
 
 
-********************************************************************************************************ĞŞ¸ÄÃüÁîĞĞ±àÂë¸ñÊ½
+1.Win+R===>è¾“å…¥ slmgr.vbs -dlv   æ˜¾ç¤ºï¼šæœ€ä¸ºè¯¦å°½çš„æ¿€æ´»ä¿¡æ¯ï¼ŒåŒ…æ‹¬ï¼šæ¿€æ´»IDã€å®‰è£…IDã€æ¿€æ´»æˆªæ­¢æ—¥æœŸ
+2.Win+R===>è¾“å…¥ slmgr.vbs -dli   æ˜¾ç¤ºï¼šæ“ä½œç³»ç»Ÿç‰ˆæœ¬ã€éƒ¨åˆ†äº§å“å¯†é’¥ã€è®¸å¯è¯çŠ¶æ€
+3.Win+R===>è¾“å…¥ slmgr.vbs -xpr   æ˜¾ç¤ºï¼šæ˜¯å¦å½»åº•æ¿€æ´»
+4.Win+R===>è¾“å…¥ slmgr.vbs -ato   æ˜¾ç¤ºæ¿€æ´»çŠ¶æ€ã€‚
 
-chcp 65001 ÉèÖÃÃüÁîĞĞµÄ±àÂë¸ñÊ½Îª UTF-8
-chcp 936   ÉèÖÃÃüÁîĞĞµÄ±àÂë¸ñÊ½Îª ¼òÌåÖĞÎÄ GBK
+
+********************************************************************************************************ä¿®æ”¹å‘½ä»¤è¡Œç¼–ç æ ¼å¼
+
+chcp 65001 è®¾ç½®å‘½ä»¤è¡Œçš„ç¼–ç æ ¼å¼ä¸º UTF-8
+chcp 936   è®¾ç½®å‘½ä»¤è¡Œçš„ç¼–ç æ ¼å¼ä¸º ç®€ä½“ä¸­æ–‡ GBK
 
 
 
-***********************************************************************************************************ant ÃüÁî
+***********************************************************************************************************ant å‘½ä»¤
 
-android update project --name MyActivity£¨Òª±àÒëµÄÏîÄ¿Ãû³Æ£© --target 11 £¨android°æ±¾ºÅ 11Îªandroid 6.0£© --path G:\Projects\Projects200\MyActivity£¨ÏîÄ¿Â·¾¶£©  ´´½¨ant
+android update project --name MyActivityï¼ˆè¦ç¼–è¯‘çš„é¡¹ç›®åç§°ï¼‰ --target 11 ï¼ˆandroidç‰ˆæœ¬å· 11ä¸ºandroid 6.0ï¼‰ --path G:\Projects\Projects200\MyActivityï¼ˆé¡¹ç›®è·¯å¾„ï¼‰  åˆ›å»ºant
 
 android update project --name ss --target 10  --path G:\Projects\YuYingProjects\ss
 
-android.bat list targets ²é¿´target  id±àºÅ¡£
+android.bat list targets æŸ¥çœ‹target  idç¼–å·ã€‚
 
 ant release
-ant -buildfile xfk_build.xml  ±àÒëÎÊ¹û×ÀÃæ
+ant -buildfile xfk_build.xml  ç¼–è¯‘é—®æœæ¡Œé¢
 
 ant -buildfile xfk_build_release.xml
 
 
-***********************************************************************************************************androidÏîÄ¿Ç©ÃûµÄÉú³É
+***********************************************************************************************************androidé¡¹ç›®ç­¾åçš„ç”Ÿæˆ
 
-µ½jdk µÄbin Ä¿Â¼ÏÂ£º
+åˆ°jdk çš„bin ç›®å½•ä¸‹ï¼š
 keytool -genkey -alias alias_name -keyalg RSA -validity 7000 -keystore GuoBiReleaseKey.keystore
 
 keytool -genkey -alias androidtext.keystore -keyalg RSA -validity 30 -keystore androidtext.keystore 
 
-(-validity 20000´ú±íÓĞĞ§ÆÚÌìÊı)£¬ÃüÁîÍê³Éºó£¬binÄ¿Â¼ÖĞ»áÉú³Éandroid.keystore
+(-validity 20000ä»£è¡¨æœ‰æ•ˆæœŸå¤©æ•°)ï¼Œå‘½ä»¤å®Œæˆåï¼Œbinç›®å½•ä¸­ä¼šç”Ÿæˆandroid.keystore
 
-²é¿´ÃüÁîkeytool -list -keystore "hybrid2dey.keystore" ÊäÈëÄãÉèÖÃµÄkeystoreÃÜÂë
+æŸ¥çœ‹å‘½ä»¤keytool -list -keystore "hybrid2dey.keystore" è¾“å…¥ä½ è®¾ç½®çš„keystoreå¯†ç 
 
-           keytool -list -v -keystore debug.keystore  ²é¿´ md5 ºÍsha1
-²é¿´Ò»¸öÓ¦ÓÃµÄÇ©ÃûĞÅÏ¢ 
- 1 ÏÈ½âÑ¹apk ÎÄ¼ş¡£ È¥µ½META-INFÄ¿Â¼
+           keytool -list -v -keystore debug.keystore  æŸ¥çœ‹ md5 å’Œsha1
+æŸ¥çœ‹ä¸€ä¸ªåº”ç”¨çš„ç­¾åä¿¡æ¯ 
+ 1 å…ˆè§£å‹apk æ–‡ä»¶ã€‚ å»åˆ°META-INFç›®å½•
  2  keytool -printcert -file CERT.RSA 
-*************************************************************************************************************·´±àÒëÃüÁî
+*************************************************************************************************************åç¼–è¯‘å‘½ä»¤
 
-·´±àÒëÓ¦ÓÃµ½µÄ¹¤¾ß
+åç¼–è¯‘åº”ç”¨åˆ°çš„å·¥å…·
 
-1.dex2jar.bat ·´±àÒëjava´úÂë 
+1.dex2jar.bat åç¼–è¯‘javaä»£ç  
  
-  ½«apkÎÄ¼ş½âÑ¹µÃµ½classes.dexµÄÎÄ¼ş£»ÔÙÓÃÃüÁî  dex2jar.bat classes.dex ±àÒë
+  å°†apkæ–‡ä»¶è§£å‹å¾—åˆ°classes.dexçš„æ–‡ä»¶ï¼›å†ç”¨å‘½ä»¤  dex2jar.bat classes.dex ç¼–è¯‘
 
-2 apktool.jar  appt.exe ·´±àÒëandroidÖĞµÄxmlÎÄ¼ş
+2 apktool.jar  appt.exe åç¼–è¯‘androidä¸­çš„xmlæ–‡ä»¶
 
   apktool d <file.apk>
 
-<file.apk>´ú±íÁËÒª·´±àÒëµÄapkÎÄ¼şµÄÂ·¾¶£¬×îºÃĞ´¾ø¶ÔÂ·¾¶£¬±ÈÈçC:\MusicPlayer.apk 
+<file.apk>ä»£è¡¨äº†è¦åç¼–è¯‘çš„apkæ–‡ä»¶çš„è·¯å¾„ï¼Œæœ€å¥½å†™ç»å¯¹è·¯å¾„ï¼Œæ¯”å¦‚C:\MusicPlayer.apk 
 
-<dir>´ú±íÁË·´±àÒëºóµÄÎÄ¼şµÄ´æ´¢Î»ÖÃ£¬±ÈÈçC:\MusicPlayer 
+<dir>ä»£è¡¨äº†åç¼–è¯‘åçš„æ–‡ä»¶çš„å­˜å‚¨ä½ç½®ï¼Œæ¯”å¦‚C:\MusicPlayer 
 
-Èç¹ûÄã¸ø¶¨µÄ<dir>ÒÑ¾­´æÔÚ£¬ÄÇÃ´ÊäÈëÍê¸ÃÃüÁîºó»áÌáÊ¾Äã£¬²¢ÇÒÎŞ·¨Ö´ĞĞ£¬ĞèÒªÄãÖØĞÂĞŞ¸ÄÃüÁî¼ÓÈë-fÖ¸Áî 
+å¦‚æœä½ ç»™å®šçš„<dir>å·²ç»å­˜åœ¨ï¼Œé‚£ä¹ˆè¾“å…¥å®Œè¯¥å‘½ä»¤åä¼šæç¤ºä½ ï¼Œå¹¶ä¸”æ— æ³•æ‰§è¡Œï¼Œéœ€è¦ä½ é‡æ–°ä¿®æ”¹å‘½ä»¤åŠ å…¥-fæŒ‡ä»¤ 
 
-apktool d ¨Cf <file.apk> <dir> 
+apktool d â€“f <file.apk> <dir> 
 
 
-ÕâÑù¾Í»áÇ¿ĞĞ¸²¸ÇÒÑ¾­´æÔÚµÄÎÄ¼ş 
+è¿™æ ·å°±ä¼šå¼ºè¡Œè¦†ç›–å·²ç»å­˜åœ¨çš„æ–‡ä»¶ 
 
-  Ö±½ÓÊäÈë apktool d HelloWord.apk (HelloWord.apk)ÎªÎÄ¼şÃû
+  ç›´æ¥è¾“å…¥ apktool d HelloWord.apk (HelloWord.apk)ä¸ºæ–‡ä»¶å
   
-************************************************************************************************************.soÎÄ¼şµÄÉú³É
+************************************************************************************************************.soæ–‡ä»¶çš„ç”Ÿæˆ
 
-1.ÔÚandroid ÏîÄ¿ÖĞ±àĞ´nativ ·½·¨ ¶¨ÒåsoÎÄ¼şÃû 
+1.åœ¨android é¡¹ç›®ä¸­ç¼–å†™nativ æ–¹æ³• å®šä¹‰soæ–‡ä»¶å 
 public class GBEngineApi
     static {
     		System.loadLibrary("gb_im_v5.2");
     	}
     	public static native int a(int langID, int subLangID, byte[] ldb);
-2.½øÈëÏîÄ¿binµÄcalssesÄ¿Â¼ÏÂ Ö´ĞĞ
-    javah com.guobi.gbime.engine.GBEngineApi  (javah °üÃû£«ÀàÃû) Éú³É.h 
+2.è¿›å…¥é¡¹ç›®binçš„calssesç›®å½•ä¸‹ æ‰§è¡Œ
+    javah com.guobi.gbime.engine.GBEngineApi  (javah åŒ…åï¼‹ç±»å) ç”Ÿæˆ.h 
 	
-3.ÔÚÏîÄ¿ÖĞĞÂ½¨jni Ä¿Â¼ ½«.h ÎÄ¼ş·Å½øÈ¥ ²¢Í¨¹ı.h ÎÄ¼ş±àĞ´CÎÄ¼ş 
+3.åœ¨é¡¹ç›®ä¸­æ–°å»ºjni ç›®å½• å°†.h æ–‡ä»¶æ”¾è¿›å» å¹¶é€šè¿‡.h æ–‡ä»¶ç¼–å†™Cæ–‡ä»¶ 
 
-4.ÔÚjniÄ¿Â¼ĞÂ½¨Android.mk ÎÄ¼ş £¨ÅäÖÃjni ²ÎÊı£©
+4.åœ¨jniç›®å½•æ–°å»ºAndroid.mk æ–‡ä»¶ ï¼ˆé…ç½®jni å‚æ•°ï¼‰
          LOCAL_PATH:= $(call my-dir)
          
          include $(CLEAR_VARS)
          
-         LOCAL_MODULE    := libgb_im_v5.2 //Ö¸¶¨ soÎÄ¼şÃû Ç°Ãæ¼Ólib
+         LOCAL_MODULE    := libgb_im_v5.2 //æŒ‡å®š soæ–‡ä»¶å å‰é¢åŠ lib
          LOCAL_CFLAGS    := -Werror
-         LOCAL_SRC_FILES := JniClass.c Òª±àÒëµÄcÎÄ¼ş
+         LOCAL_SRC_FILES := JniClass.c è¦ç¼–è¯‘çš„cæ–‡ä»¶
          LOCAL_LDLIBS    := -llog
          
          include $(BUILD_SHARED_LIBRARY)
 
-5.½øÈëÏîÄ¿Â·¾¶Ö´ĞĞ
-   ndk-build APP_API=armeabi (APP_API=armeabi ÒªÉú³ÉsoÎÄ¼şµÄÄÚºË°æ±¾ x86 armeabi-v7a)
+5.è¿›å…¥é¡¹ç›®è·¯å¾„æ‰§è¡Œ
+   ndk-build APP_API=armeabi (APP_API=armeabi è¦ç”Ÿæˆsoæ–‡ä»¶çš„å†…æ ¸ç‰ˆæœ¬ x86 armeabi-v7a)
 
 
-******************************ÆÆ½â mac os ÏµÍ³µÄÃÜÂë*****************************************************************
+******************************ç ´è§£ mac os ç³»ç»Ÿçš„å¯†ç *****************************************************************
 
-1£º ¿ª»úÊÇ°´command+S¼ü¡£
-2¡¢Ö®ºó»áµ¯³öÃüÁî×Ö·û£¬ÊäÈëfsck -y²¢°´»Ø³µ¡£
-3¡¢ÉÏÃæµÄÃüÁîÖ´ĞĞÍê³ÉºóÔÙÊäÈëmount -uaw /»Ø³µ¡£
-4£ºÈ»ºóÊäÈërm /var/db/.AppleSetupDone»Ø³µ¡£
-5¡¢È»ºóÊäÈëreboot»Ø³µÖØÆôµçÄÔ¡£
-6 £º ĞÂ½¨ÕËºÅ½øÈëÏµÍ³ĞŞ¸ÄÔ­ÓĞÃÜÂë¡£
-
-
-***************gitµÄ»ù±¾Ê¹ÓÃÃüÁî****************************
+1ï¼š å¼€æœºæ˜¯æŒ‰command+Sé”®ã€‚
+2ã€ä¹‹åä¼šå¼¹å‡ºå‘½ä»¤å­—ç¬¦ï¼Œè¾“å…¥fsck -yå¹¶æŒ‰å›è½¦ã€‚
+3ã€ä¸Šé¢çš„å‘½ä»¤æ‰§è¡Œå®Œæˆåå†è¾“å…¥mount -uaw /å›è½¦ã€‚
+4ï¼šç„¶åè¾“å…¥rm /var/db/.AppleSetupDoneå›è½¦ã€‚
+5ã€ç„¶åè¾“å…¥rebootå›è½¦é‡å¯ç”µè„‘ã€‚
+6 ï¼š æ–°å»ºè´¦å·è¿›å…¥ç³»ç»Ÿä¿®æ”¹åŸæœ‰å¯†ç ã€‚
 
 
-http://www.ruanyifeng.com/blog/2014/06/git_remote.html ÏêÏ¸½Ì³Ì
+***************gitçš„åŸºæœ¬ä½¿ç”¨å‘½ä»¤****************************
 
 
-cat  text.txt ²é¿´Ä³Ò»¸öÎÄ¼ş
-
-1£º git init ³õÊ¼»¯git
+http://www.ruanyifeng.com/blog/2014/06/git_remote.html è¯¦ç»†æ•™ç¨‹
 
 
-2: git help ²é¿´°ïÖúÎÄµµ
+cat  text.txt æŸ¥çœ‹æŸä¸€ä¸ªæ–‡ä»¶
 
-3: git config --global user.name "chenqian" ÉèÖÃµ±Ç°·ÃÎÊµÄÓÃ»§Ãû
-
-4: git config --global user.email "1096011884@qq.com" ÉèÖÃµ±Ç°·ÃÎÊÓÊ¼ş
+1ï¼š git init åˆå§‹åŒ–git
 
 
-5: git add chenqian.txt Ïò±¾µØ²Ö¿âÌí¼ÓÒ»¸öÎÄ¼ş
+2: git help æŸ¥çœ‹å¸®åŠ©æ–‡æ¡£
 
-    git add *  Ìí¼Óµ±Ç°Ä¿Â¼ÏÂËùÒÔµÄÎÄ¼ş
+3: git config --global user.name "chenqian" è®¾ç½®å½“å‰è®¿é—®çš„ç”¨æˆ·å
 
-6£ºgit commit -m "Ìí¼ÓÒ»¸öĞÂµÄÎÄ¼ş"   Ïò±¾µØ²Ö¿âÌá½»ÒÑ¾­Ìí¼ÓµÄÎÄ¼ş ºóÃæÊÇ×¢ÊÍ
-
-
-git diff readme.txt  ²é¿´ĞŞ¸ÄµÄÄÚÈİ
-
-ls ²é¿´µ±Ç°µÄÎÄ¼ş
-
-git status  ²é¿´µ±Ç°×´Ì¬£¬£¨Î´Ìí¼Ó±¾µØ¿â£©
-
-//»ØÍË²Ù×÷
-
-git reflog ²é¿´ÀúÊ·Ìá½»µÄ°æ±¾ºÅ
-
-git reset --hard HEAD^ »ØÍËµ½ÉÏÒ»¸ö°æ±¾
-git reset --hard HEAD^^ »ØÍËµ½ÉÏÉÏÒ»¸ö°æ±¾
-git reset --hard HEAD~100 »ØÍËµ½ÉÏ100¸ö°æ±¾
-
-git reset -hard 845b05a  »ØÍËµ½¹Ì¶¨µÄ°æ±¾£¨845b05a £©Îª°æ±¾ºÅ
+4: git config --global user.email "1096011884@qq.com" è®¾ç½®å½“å‰è®¿é—®é‚®ä»¶
 
 
-git checkout --readme.txt  °Ñreadme.txtÎÄ¼şÔÚ¹¤×÷Çø×öµÄĞŞ¸ÄÈ«²¿³·Ïú
+5: git add chenqian.txt å‘æœ¬åœ°ä»“åº“æ·»åŠ ä¸€ä¸ªæ–‡ä»¶
+
+    git add *  æ·»åŠ å½“å‰ç›®å½•ä¸‹æ‰€ä»¥çš„æ–‡ä»¶
+
+6ï¼šgit commit -m "æ·»åŠ ä¸€ä¸ªæ–°çš„æ–‡ä»¶"   å‘æœ¬åœ°ä»“åº“æäº¤å·²ç»æ·»åŠ çš„æ–‡ä»¶ åé¢æ˜¯æ³¨é‡Š
 
 
-rm readme.txt É¾³ıÎÄ¼ş ´ÓÓ²ÅÌÉ¾³ı
-git log ²é¿´ÀúÊ·Ìá½»¼ÇÂ¼
+git diff readme.txt  æŸ¥çœ‹ä¿®æ”¹çš„å†…å®¹
+
+ls æŸ¥çœ‹å½“å‰çš„æ–‡ä»¶
+
+git status  æŸ¥çœ‹å½“å‰çŠ¶æ€ï¼Œï¼ˆæœªæ·»åŠ æœ¬åœ°åº“ï¼‰
+
+//å›é€€æ“ä½œ
+
+git reflog æŸ¥çœ‹å†å²æäº¤çš„ç‰ˆæœ¬å·
+
+git reset --hard HEAD^ å›é€€åˆ°ä¸Šä¸€ä¸ªç‰ˆæœ¬
+git reset --hard HEAD^^ å›é€€åˆ°ä¸Šä¸Šä¸€ä¸ªç‰ˆæœ¬
+git reset --hard HEAD~100 å›é€€åˆ°ä¸Š100ä¸ªç‰ˆæœ¬
+
+git reset -hard 845b05a  å›é€€åˆ°å›ºå®šçš„ç‰ˆæœ¬ï¼ˆ845b05a ï¼‰ä¸ºç‰ˆæœ¬å·
+
+
+git checkout --readme.txt  æŠŠreadme.txtæ–‡ä»¶åœ¨å·¥ä½œåŒºåšçš„ä¿®æ”¹å…¨éƒ¨æ’¤é”€
+
+
+rm readme.txt åˆ é™¤æ–‡ä»¶ ä»ç¡¬ç›˜åˆ é™¤
+git log æŸ¥çœ‹å†å²æäº¤è®°å½•
 
 
 
-·¢²¼ µ½Ô¶³Ì ²Ö¿â  origin ÎªÖ÷»úÃû
+å‘å¸ƒ åˆ°è¿œç¨‹ ä»“åº“  origin ä¸ºä¸»æœºå
 
-  git remote add origin https://github.com/chenqian19911214/chenqiantext.git ½¨Á¢Ô¶³Ì²Ö¿âµÄÁ´½Ó
+  git remote add origin https://github.com/chenqian19911214/chenqiantext.git å»ºç«‹è¿œç¨‹ä»“åº“çš„é“¾æ¥
   
-  git push  -u  master °Ñµ±Ç°·ÖÖ§masterÍÆËÍµ½Ô¶³Ì  µÚÒ»´Î Ìá½»
-  git push origin master  ÒÔºóÌá½»
+  git push  -u  master æŠŠå½“å‰åˆ†æ”¯masteræ¨é€åˆ°è¿œç¨‹  ç¬¬ä¸€æ¬¡ æäº¤
+  git push origin master  ä»¥åæäº¤
 
 
  
    
    
    
-   git stash °Ñµ±Ç°µÄ¹¤×÷Òş²ØÆğÀ´ µÈÒÔºó»Ö¸´ÏÖ³¡ºó¼ÌĞø¹¤×÷
+   git stash æŠŠå½“å‰çš„å·¥ä½œéšè—èµ·æ¥ ç­‰ä»¥åæ¢å¤ç°åœºåç»§ç»­å·¥ä½œ
 
-   git stash list ²é¿´ËùÓĞ±»Òş²ØµÄÎÄ¼şÁĞ±í
+   git stash list æŸ¥çœ‹æ‰€æœ‰è¢«éšè—çš„æ–‡ä»¶åˆ—è¡¨
 
-   git stash apply »Ö¸´±»Òş²ØµÄÎÄ¼ş£¬µ«ÊÇÄÚÈİ²»É¾³ı
+   git stash apply æ¢å¤è¢«éšè—çš„æ–‡ä»¶ï¼Œä½†æ˜¯å†…å®¹ä¸åˆ é™¤
 
-   git stash drop É¾³ıÎÄ¼ş
+   git stash drop åˆ é™¤æ–‡ä»¶
 
-   git stash pop »Ö¸´ÎÄ¼şµÄÍ¬Ê± Ò²É¾³ıÎÄ¼ş
+   git stash pop æ¢å¤æ–‡ä»¶çš„åŒæ—¶ ä¹Ÿåˆ é™¤æ–‡ä»¶
    
    
    
-  ´ÓÔ¶³Ì²Ö¿âÀ­È¥´úÂë ¿ËÂ¡»úÃû£¨À­È¡´úÂë£©
+  ä»è¿œç¨‹ä»“åº“æ‹‰å»ä»£ç  å…‹éš†æœºåï¼ˆæ‹‰å–ä»£ç ï¼‰
   
-     git clone https://github.com/chenqian19911214/chenqiantext.git G:\Projects\copegit ¸ÃÃüÁî»áÔÚ±¾µØÖ÷»úÉú³ÉÒ»¸öÄ¿Â¼
+     git clone https://github.com/chenqian19911214/chenqiantext.git G:\Projects\copegit è¯¥å‘½ä»¤ä¼šåœ¨æœ¬åœ°ä¸»æœºç”Ÿæˆä¸€ä¸ªç›®å½•
  
-     git clone -o jQuery https://github.com/jquery/jquery.git  ¿ËÂ¡ÊÇÖ¸¶¨Ö÷»úÃû Îª JQuery
+     git clone -o jQuery https://github.com/jquery/jquery.git  å…‹éš†æ˜¯æŒ‡å®šä¸»æœºå ä¸º JQuery
    
   
- git remote ¹ÜÀíÖ÷»ú
+ git remote ç®¡ç†ä¸»æœº
  
-     git remote Òª²é¿´Ô¶³Ì¿âµÄĞÅÏ¢ 
+     git remote è¦æŸ¥çœ‹è¿œç¨‹åº“çš„ä¿¡æ¯ 
  
-    git remote ¨Cv ²é¿´Ô¶³Ì¿âµÄÏêÏ¸ĞÅÏ¢
+    git remote â€“v æŸ¥çœ‹è¿œç¨‹åº“çš„è¯¦ç»†ä¿¡æ¯
     
-    git remote show origin ¿ÉÒÔ²é¿´¸ÃÖ÷»úµÄÏêÏ¸ĞÅÏ¢¡£(origin ÎªÖ÷»úÃû)
+    git remote show origin å¯ä»¥æŸ¥çœ‹è¯¥ä¸»æœºçš„è¯¦ç»†ä¿¡æ¯ã€‚(origin ä¸ºä¸»æœºå)
     
-    git remote add origin_one https://github.com/chenqian19911214/chenqiantext.git ÔÚÔ¶³ÌÌí¼ÓÒ»¸öÖ÷»ú
+    git remote add origin_one https://github.com/chenqian19911214/chenqiantext.git åœ¨è¿œç¨‹æ·»åŠ ä¸€ä¸ªä¸»æœº
     
-    git remote rm  origin_one É¾³ıÒ»¸öÔ¶³ÌÖ÷»ú
+    git remote rm  origin_one åˆ é™¤ä¸€ä¸ªè¿œç¨‹ä¸»æœº
     
-    git remote rename   origin_one origin_two Ô¶³ÌÖ÷»úÃûµÄĞŞ¸Ä
+    git remote rename   origin_one origin_two è¿œç¨‹ä¸»æœºåçš„ä¿®æ”¹
  
- git fetch  ¸üĞÂ±¾µØÊı¾İ £¨Ïà¶ÔÓÚ Updatd£©
+ git fetch  æ›´æ–°æœ¬åœ°æ•°æ® ï¼ˆç›¸å¯¹äº Updatdï¼‰
  
-   git fetch origin_one master ( git fetch Ö÷»úÃû ·ÖÖ§Ãû)
+   git fetch origin_one master ( git fetch ä¸»æœºå åˆ†æ”¯å)
 
-   ·ÖÖ§
+   åˆ†æ”¯
   
-   ²é¿´·ÖÖ§£ºgit branch
+   æŸ¥çœ‹åˆ†æ”¯ï¼šgit branch
 
-   ´´½¨·ÖÖ§£ºgit branch name
+   åˆ›å»ºåˆ†æ”¯ï¼šgit branch name
    
-   ²é¿´Ô¶³Ì·ÖÖ§£ºgit branch -r 
+   æŸ¥çœ‹è¿œç¨‹åˆ†æ”¯ï¼šgit branch -r 
 
-   ²é¿´ËùÓĞ·ÖÖ§£ºgit branch -a
+   æŸ¥çœ‹æ‰€æœ‰åˆ†æ”¯ï¼šgit branch -a
    
-   ÇĞ»»·ÖÖ§£ºgit checkout name
+   åˆ‡æ¢åˆ†æ”¯ï¼šgit checkout name
 
-   ´´½¨+ÇĞ»»·ÖÖ§£ºgit checkout ¨Cb name
+   åˆ›å»º+åˆ‡æ¢åˆ†æ”¯ï¼šgit checkout â€“b name
    
-   ÔÚorigin/master ·ÖÖ§µÄ»ù´¡ÉÏÔÙĞÂ½¨Ò»¸ö·ÖÖ§ 
+   åœ¨origin/master åˆ†æ”¯çš„åŸºç¡€ä¸Šå†æ–°å»ºä¸€ä¸ªåˆ†æ”¯ 
    git checkout -b newBrach origin/master 
 
-   ºÏ²¢Ä³·ÖÖ§µ½µ±Ç°·ÖÖ§£ºgit merge name
 
-   É¾³ı·ÖÖ§£ºgit branch ¨Cd name
- 
- git  pull  ËùÈ¡»ØµÄ¸üĞÂ
- 
-   git pull origin next:master (git pull <Ô¶³ÌÖ÷»úÃû> <Ô¶³Ì·ÖÖ§Ãû>:<±¾µØ·ÖÖ§Ãû>)
- 
-   git pull origin next(Èç¹ûÔ¶³Ì·ÖÖ§ÊÇÓëµ±Ç°·ÖÖ§ºÏ²¢£¬ÔòÃ°ºÅºóÃæµÄ²¿·Ö¿ÉÒÔÊ¡ÂÔ¡£)
+   git remote update origin --prune
 
-   git pull -p (ÔÚ±¾µØÉ¾³ıÔ¶³ÌÒÑ¾­É¾³ıµÄ·ÖÖ§)
+   git remote update origin -p //åˆ·æ–°åˆ†æ”¯
+
+   git branch --set-upstream-to origin/forum_prediction_20190630 forum_prediction_20190630  //åŒæ­¥æŸä¸ªåˆ†æ”¯
+   åˆå¹¶æŸåˆ†æ”¯åˆ°å½“å‰åˆ†æ”¯ï¼šgit merge name
+
+   åˆ é™¤åˆ†æ”¯ï¼šgit branch â€“d name
+ 
+ git  pull  æ‰€å–å›çš„æ›´æ–°
+ 
+   git pull origin next:master (git pull <è¿œç¨‹ä¸»æœºå> <è¿œç¨‹åˆ†æ”¯å>:<æœ¬åœ°åˆ†æ”¯å>)
+ 
+   git pull origin next(å¦‚æœè¿œç¨‹åˆ†æ”¯æ˜¯ä¸å½“å‰åˆ†æ”¯åˆå¹¶ï¼Œåˆ™å†’å·åé¢çš„éƒ¨åˆ†å¯ä»¥çœç•¥ã€‚)
+
+   git pull -p (åœ¨æœ¬åœ°åˆ é™¤è¿œç¨‹å·²ç»åˆ é™¤çš„åˆ†æ”¯)
    
    
-######################################centos Ïµ
-Í³ ¼° svn ³£ÓÃÃüÁî ###############################################
+######################################centos ç³»
+ç»Ÿ åŠ svn å¸¸ç”¨å‘½ä»¤ ###############################################
 
-https://blog.csdn.net/huangjingqian/article/details/53893927  CentOS °²×°java½Ì³Ì
-https://www.linuxidc.com/Linux/2017-03/141300.htm             CentOS °²×°mysql½Ì³Ì
+https://blog.csdn.net/huangjingqian/article/details/53893927  CentOS å®‰è£…javaæ•™ç¨‹
+https://www.linuxidc.com/Linux/2017-03/141300.htm             CentOS å®‰è£…mysqlæ•™ç¨‹
 http://150.109.46.27:3690/testsvn
 
 
-htpasswd -c /usr/lib/squid/passwd user1 Îª´úÀíÌí¼ÓÓÃ»§
+htpasswd -c /usr/lib/squid/passwd user1 ä¸ºä»£ç†æ·»åŠ ç”¨æˆ·
   
   3128
   
-svnserve -d -r /projects/svn/testsvn            Æô¶¯svn ·şÎñ /projects/svn/testsvn Îªsvn Â·¾¶
+svnserve -d -r /projects/svn/testsvn            å¯åŠ¨svn æœåŠ¡ /projects/svn/testsvn ä¸ºsvn è·¯å¾„
 
-netstat -antlp|grep svnserve  ²é¿´svn ¶Ë¿Ú
+netstat -antlp|grep svnserve  æŸ¥çœ‹svn ç«¯å£
 
-ps aux | grep svn ²é¿´svn ½ø³Ì
+ps aux | grep svn æŸ¥çœ‹svn è¿›ç¨‹
 
-kill -s 9 2425 É±ËÀ svn ½ø³Ì
+kill -s 9 2425 æ€æ­» svn è¿›ç¨‹
 
 
-systemctl stop firewalld.service ¹Ø±Õ·À»ğÇ½
-systemctl start firewalld.service ¿ªÆô·À»ğÇ½
-systemctl status firewalld.service ²éÑ¯·À»ğÇ½µÄ×´Ì¬
+systemctl stop firewalld.service å…³é—­é˜²ç«å¢™
+systemctl start firewalld.service å¼€å¯é˜²ç«å¢™
+systemctl status firewalld.service æŸ¥è¯¢é˜²ç«å¢™çš„çŠ¶æ€
 
-firewall-cmd --zone=public --add-port=3690/tcp --permanent ÓÀ¾Ã¿ªÆô3096¶Ë¿Ú
-ÃüÁîº¬Òå£º
+firewall-cmd --zone=public --add-port=3690/tcp --permanent æ°¸ä¹…å¼€å¯3096ç«¯å£
+å‘½ä»¤å«ä¹‰ï¼š
 
  
---zone #×÷ÓÃÓò
+--zone #ä½œç”¨åŸŸ
  
---add-port=80/tcp  #Ìí¼Ó¶Ë¿Ú£¬¸ñÊ½Îª£º¶Ë¿Ú/Í¨Ñ¶Ğ­Òé
+--add-port=80/tcp  #æ·»åŠ ç«¯å£ï¼Œæ ¼å¼ä¸ºï¼šç«¯å£/é€šè®¯åè®®
  
---permanent   #ÓÀ¾ÃÉúĞ§£¬Ã»ÓĞ´Ë²ÎÊıÖØÆôºóÊ§Ğ§
+--permanent   #æ°¸ä¹…ç”Ÿæ•ˆï¼Œæ²¡æœ‰æ­¤å‚æ•°é‡å¯åå¤±æ•ˆ
 
 firewall-cmd --reload
 
-rpm -qa | grep java ²é¿´ÏµÍ³ÊÇ·ñ´æÔÚÏà¹ØÈí¼ş
-yum repolist enabled | grep mysql ²é¿´ÒÑ¾­°²×°Èí¼şµÄ°æ±¾
+rpm -qa | grep java æŸ¥çœ‹ç³»ç»Ÿæ˜¯å¦å­˜åœ¨ç›¸å…³è½¯ä»¶
+yum repolist enabled | grep mysql æŸ¥çœ‹å·²ç»å®‰è£…è½¯ä»¶çš„ç‰ˆæœ¬
 
-systemctl start rngd Æô¶¯rngd·şÎñ
+systemctl start rngd å¯åŠ¨rngdæœåŠ¡
 
 systemctl enable tomcat.service
 systemctl disable tomcat.service
