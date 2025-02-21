@@ -9,6 +9,8 @@ guobi2468
 Netsh winsock reset  从新启动浏览器
 netsh advfirewall reset
 
+adb co
+
 adb shell logcat "过滤器名字":i  *:s  用命令行查看数据
 
 adb shell logcat "json":i  *:s
@@ -95,6 +97,8 @@ mount -o rw,remount /system  删除系统文件前的权限修改
 22. 启动Activity：
       adb shell am start -n 包名/包名＋类名（-n 类名,-a action,-d date,-m MIME-TYPE,-c category,-e 扩展数据,等）。
       adb shell am start -n com.android.email/com.android.email2.ui.MailActivityEmail
+
+      adb shell am force-stop com.android.email  关闭某个应用
 23、发布端口：
     你可以设置任意的端口号，做为主机向模拟器或设备的请求端口。如： 
 adb forward tcp:5555 tcp:8000
@@ -137,6 +141,17 @@ adb bugreport
 #rm xxx //删除文件xxx 
 #rmdir xxx //删除xxx的文件夹
 
+//显示设备所有串口
+adb shell ls -l /dev/ttyS* 
+//通过网络连接adb
+adb connect 192.168.1.188
+
+//代理相关
+连接代理
+adb shell settings put global http_proxy 192.168.1.120:10010
+
+断开代理
+adb shell settings delete global http_proxy
 ****************************************************************************************************查看wind10 系统激活详情
 
 
